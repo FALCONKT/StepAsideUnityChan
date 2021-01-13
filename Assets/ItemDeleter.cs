@@ -48,7 +48,7 @@ public class ItemDeleter : MonoBehaviour
         //    mainCamera.transform.position.z - this.transform.position.z;
 
 
-        //★　もしCameraのZ座標　が　自分自身のZ座標よりも小さければ～　自分自身を削除する
+        //★　もしCameraのZ座標　が　Item自身のZ座標よりも大きければ～　自分自身を削除する
 
         if (this.difference > this.transform.position.z)
         {
@@ -56,7 +56,7 @@ public class ItemDeleter : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        //★Game終了なら　自分自身を削除する
+        //★Game終了なら　Item自身を削除する
         //★Goal地点に到達した場合 は　背後のItem全消去
         if (unitychanObjForItemD.transform.position.z > goal.transform.position.z)
         {
